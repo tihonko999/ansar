@@ -1,0 +1,87 @@
+body
+  font-size: 16px
+  font-family: Arial, sans-serif
+  color: black
+  background: #e6e6e6
+a:link
+  color: #2078bb
+a:hover
+  color: #bd2026
+  text-decoration: none
+p
+  padding: 0.3em 0 1em 0
+  line-height: 1.3em
+span
+  line-height: 1.3em
+h1
+  font-size: 1.5em
+  font-weight: normal
+  padding: 1.875em 0 0.94em 0
+h2
+  font-size: 1.3em
+  font-weight: normal
+  padding: 1.56em 0 0.75em 0
+h3, h4, h5, h6
+  font-size: 1em
+  padding: 1em 0 0.5em 0
+ul, ol
+  padding: .3em 0 1em 1.8em
+li
+  padding: 0 0 .2em 0
+.hide
+  display: none
+.group:after
+  content: '.'
+  display: block
+  height: 0
+  clear: both
+  visibility: hidden
+.clear
+  clear: both
+object, video, iframe, img
+  max-width: 100%
+span.delim1
+  padding-right: 0.3125em
+span.delim2
+  padding-right: 0.625em
+div.delim1
+  height: 0.5em
+div.delim2
+  height: 1em
+div.delim3
+  height: 2em
+div.delim4
+  height: 4em
+p.pager
+  padding-top: 0.6em
+p.breadcrumb
+  margin: 1.3em 0 0 0
+  padding: 0.625em
+  color: #888
+  border: 1px solid #b8b8b8
+  background: #d6f2e9
+  border-radius: 5px
+h1.main
+  padding-top: 1em
+h1.mainUnderBreadcrumb
+  padding-top: 1.2em
+  padding-bottom: 0.8em
+.container
+  padding: .5em 0 1.5em 0
+  background: #fff
+section.main, section.mainAlone
+  padding: 0 1em
+//desktop
+@media (min-width: $breakpoint)
+  .container
+    padding: 1.5em 0
+    box-shadow: 0 0 20px rgba(black, .5)
+    border-radius: 0 0 5px 5px
+    margin: 0 auto
+    max-width: 980px
+    box-sizing: border-box
+  section.main, section.mainAlone
+    padding: 0 2em
+  section.main
+    float: left
+    width: 55%
