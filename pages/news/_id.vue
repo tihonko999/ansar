@@ -1,4 +1,4 @@
 <template lang="pug">
   section.main
-    h1 Hello
+    h1 New
 </template>

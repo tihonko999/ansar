@@ -2,7 +2,7 @@
   aside.aside
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
 aside.aside
   padding: 0 2em
   section
