@@ -2,10 +2,11 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
+    jquery: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
     '@nuxtjs',
@@ -19,5 +20,10 @@ module.exports = {
     quotes: ['warn', 'single'],
     'comma-dangle': ['warn', 'always-multiline'],
     'no-console': 'off',
+    curly: ['warn', 'multi'],
+    'object-curly-spacing': ['error', 'never'],
+    'no-return-assign': ['off'],
+    'arrow-parens': ['error', 'as-needed'],
+    'no-floating-decimal': ['off'],
   },
 }

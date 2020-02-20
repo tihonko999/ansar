@@ -2,13 +2,14 @@
   div
     .header
       nuxt-link.logo(to="/")
-      nuxt-link.name(to="/") Ветеринар Ансар Шарипов
+      nuxt-link.name(to="/")
+        h1 Ветеринар Ансар Шарипов
     .nav
       nuxt-link.link(to="/") Главная
-      a.link Услуги
-      nuxt-link.link(to="/info") Часто задаваемые вопросы
-      a.link Контакты
+      nuxt-link.link(to="/services") Услуги
+      nuxt-link.link(to="/contacts") Контакты
       nuxt-link.link(to="/news") Новости
+      nuxt-link.link(to="/info") Часто задаваемые вопросы
 </template>
 
 <style lang="sass" scoped>
@@ -30,8 +31,12 @@
     font-size: 1.3em
     color: #000
     text-decoration: none
+    h1
+      font-weight: normal
+      margin: 0
+      font-size: 1em
 .nav
-  background: linear-gradient(to bottom, rgb(0, 70, 121), rgb(0, 89, 133))
+  background: linear-gradient(to bottom, #004679, #005985)
   padding: 1em 0
   display: flex
   overflow: auto

@@ -1,6 +1,6 @@
 <template lang="pug">
   section.main
-    h1 Новости
+    .h1 Новости
     .item(v-for="item in items")
       .time {{date(item.date)}}
       nuxt-link(:to="`/news/${item.id}`") {{item.title}}
@@ -10,10 +10,10 @@
 import moment from 'moment'
 
 export default {
-  async asyncData ({ $axios, error }) {
+  async asyncData ({$axios, error}) {
     try {
-      const { data } = await $axios.get('/news.json')
-      return { items: data }
+      const {data} = await $axios.get('/news.json')
+      return {items: data}
     } catch (e) {
       error(e)
     }

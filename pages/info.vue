@@ -1,6 +1,6 @@
 <template lang="pug">
   section.main
-    h1 Часто задаваемые вопросы
+    .h1 Часто задаваемые вопросы
     template(v-for="item in items")
       .question(@click="toggle(item)") {{item.title}}
       transition(name="fade")

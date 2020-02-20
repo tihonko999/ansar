@@ -4,7 +4,7 @@
       nuxt-link(to="/news") Новости
       span {{item.title}}
       i {{date}}
-    h1 {{item.title}}
+    .h1 {{item.title}}
     div(v-html="item.content")
 </template>
 
@@ -12,11 +12,11 @@
 import moment from 'moment'
 
 export default {
-  async asyncData ({ $axios, error, params }) {
+  async asyncData ({$axios, error, params}) {
     try {
-      const { data } = await $axios.get('/news.json')
+      const {data} = await $axios.get('/news.json')
       const item = data.find(el => el.id === +params.id)
-      return { item }
+      return {item}
     } catch (e) {
       error(e)
     }
@@ -29,6 +29,7 @@ export default {
   head () {
     return {
       title: this.item.title,
+      titleTemplate: null,
     }
   },
 }
