@@ -16,13 +16,18 @@ h1
   margin-bottom: 1em
 object, video, iframe, img
   max-width: 100%
-//p.breadcrumb
-//  margin: 1.3em 0 0 0
-//  padding: 0.625em
-//  color: #888
-//  border: 1px solid #b8b8b8
-//  background: #d6f2e9
-//  border-radius: 5px
+p.crumbs
+  margin: 1.3em 0 0 0
+  padding: 0.625em
+  color: #888
+  border: 1px solid #b8b8b8
+  background: #d6f2e9
+  border-radius: 5px
+  span
+    &::before
+      content: ' / '
+  i::before
+    content: ' - '
 .container
   padding: .5em 0 1.5em 0
   background: #fff
