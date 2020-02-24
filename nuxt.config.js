@@ -1,15 +1,28 @@
+import news from './static/news'
+
 export default {
-  mode: 'universal',
+  mode: 'spa',
   head: {
     title: 'Ветеринар Ансар Шарипов',
     titleTemplate: '%s | Ветеринар Ансар Шарипов',
     meta: [
       {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+      },
     ],
   },
   loading: {color: '#004679'},
@@ -32,6 +45,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@nuxtjs/device',
   ],
   styleResources: {
     sass: '~assets/_globals.sass',
@@ -40,7 +54,9 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {},
+  axios: {
+    baseURL: '/',
+  },
   /*
   ** Build configuration
   */
@@ -50,5 +66,8 @@ export default {
     */
     extend (config, ctx) {
     },
+  },
+  generate: {
+    routes: news.map(el => `/news/${el.id}`),
   },
 }

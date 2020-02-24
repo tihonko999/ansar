@@ -2,7 +2,11 @@
   .grid
     .leftcol
       .h1 Добро пожаловать!
-      p Lorem ipsum
+      p Приветствую вас, дорогие друзья! Меня зовут Ансар Шаривов. Я ветеринар с 30 летним стажем. Специализируюсь на терапии и хирургии.
+      img(src="~/assets/img/ansar.jpg")
+      p Долгое время я работал в ветеринарной клиние Аграрного университета. Но недавно уволился. На данный момент приезжаю по вызову.
+      p Весной-летом откою свой ветеринарный кабинет. Подробнее об этом в видео
+      iframe.iframe(width="853" allowfullscreen frameborder="0" src="//vk.com/video_ext.php?oid=-23300507&id=456244536&hash=3cc7c100489cad9f&hd=2")
     .rightcol
       .h1 Свежие новости
       .item(v-for="item in items")
@@ -40,6 +44,8 @@ export default {
 <style lang="sass" scoped>
 .grid
   padding: .5em 1em 0 1em
+.iframe
+  height: 280px
 .rightcol
   .item
     margin-bottom: 20px
@@ -50,6 +56,8 @@ export default {
     text-align: right
 //desktop
 @media (min-width: $breakpoint)
+  .iframe
+    height: 480px
   .grid
     display: grid
     grid-template-columns: 1fr 300px
