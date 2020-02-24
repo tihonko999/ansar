@@ -1,21 +1,19 @@
 import news from './static/news'
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   head: {
     title: 'Ветеринар Ансар Шарипов',
     titleTemplate: '%s | Ветеринар Ансар Шарипов',
     meta: [
       {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: 'Ветеринар по вызову на дом. Помощь бездомным животным.'},
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        hid: 'og-description', name: 'og:description', content: 'Ветеринар по вызову на дом. Помощь бездомным животным.',
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
-      },
+      // {hid: 'og-title', name: 'og:title', content: 'Ветеринар Ансар Шарипов'},
+      {hid: 'og-image', name: 'og:image', content: 'https://veterinar-ufa.ru/img/ansar-sharipov.jpg'},
     ],
     link: [
       {
@@ -55,7 +53,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: '/',
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://veterinar-ufa.ru' : 'http://localhost:3000',
   },
   /*
   ** Build configuration
