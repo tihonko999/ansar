@@ -1,7 +1,8 @@
 import news from './static/news'
 
 export default {
-  mode: 'universal',
+  // в universal режиме падает nuxt generate по непонятным причинам
+  mode: 'spa',
   head: {
     title: 'Ветеринар Ансар Шарипов',
     titleTemplate: '%s | Ветеринар Ансар Шарипов',
@@ -9,18 +10,12 @@ export default {
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Ветеринар по вызову на дом. Помощь бездомным животным.'},
-      {
-        hid: 'og-description', name: 'og:description', content: 'Ветеринар по вызову на дом. Помощь бездомным животным.',
-      },
+      {hid: 'og-description', name: 'og:description', content: 'Ветеринар по вызову на дом. Помощь бездомным животным.'},
       // {hid: 'og-title', name: 'og:title', content: 'Ветеринар Ансар Шарипов'},
       {hid: 'og-image', name: 'og:image', content: 'https://veterinar-ufa.ru/img/ansar-sharipov.jpg'},
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico',
-      },
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
     ],
   },
   loading: {color: '#004679'},

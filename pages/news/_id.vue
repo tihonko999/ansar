@@ -14,7 +14,8 @@ import moment from 'moment'
 export default {
   async asyncData ({$axios, error, params}) {
     try {
-      const {data} = await $axios.get('/news.json')
+      // Иначе кешируеются
+      const {data} = await $axios.get(`news.json?rand=${Math.random()}`)
       const item = data.find(el => el.id === +params.id)
       return {item}
     } catch (e) {

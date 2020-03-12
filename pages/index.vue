@@ -24,7 +24,8 @@ import moment from 'moment'
 export default {
   async asyncData ({$axios, error}) {
     try {
-      const {data} = await $axios.get('/news.json')
+      // Иначе кешируеются
+      const {data} = await $axios.get(`news.json?rand=${Math.random()}`)
       return {items: data.splice(0, 3)}
     } catch (e) {
       error(e)
@@ -46,14 +47,18 @@ export default {
 <style lang="sass" scoped>
 .grid
   padding: .5em 1em 0 1em
+
 .iframe
   height: 280px
+
 .rightcol
   .item
     margin-bottom: 20px
+
     .time
       font-style: italic
       margin-bottom: 3px
+
   .all
     text-align: right
 //desktop
