@@ -5,11 +5,12 @@
       span {{item.title}}
       i {{date}}
     .h1 {{item.title}}
-    div(v-html="item.content")
+    div(ref="content")
 </template>
 
 <script>
 import moment from 'moment'
+import insertHtml from '~/helpers/insert-html'
 
 export default {
   async asyncData ({$axios, error, params}) {
@@ -26,6 +27,9 @@ export default {
     date () {
       return moment(this.item.date).format('DD MMMM YYYY')
     },
+  },
+  mounted () {
+    insertHtml(this.$refs.content, this.item.content)
   },
   head () {
     return {
