@@ -6,8 +6,7 @@
     .socials
       a.item.__vk(href="https://vk.com/ansar72")
       a.item.__wa(href="https://api.whatsapp.com/send?phone=79174142891")
-    a(href="tel:79174142891")
-      img.phone(src="~/assets/img/phone.svg")
+    a(href="tel:+79174142891") +7-(917)-414-28-91
     p г.Уфа, бульвар Хадии Давлетшиной 9, под №3, офис 6
     iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af4ecef90d78629f5d3ae669f04d5857dfb9ff6db0d5db7c53b1160eab8900676&amp;source=constructor" width="100%" height="400" frameborder="0")
 </template>
