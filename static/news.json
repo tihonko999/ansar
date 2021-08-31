@@ -1,5 +1,17 @@
 [
   {
+    "id": 38,
+    "title": "Ансар Шарипов рассказывает что делать, если вы подобрали питомца на улице",
+    "content": "<video src='/video/video1.mp4' controls class='video-mp4' >",
+    "date": "2021-08-31"
+  },
+  {
+    "id": 37,
+    "title": "Жителей Башкирии могут обязать чипировать своих питомцев",
+    "content": "<p>Однако ветеринары опасаются, что это может нанести вред домашним животным</p><a href='https://ufa1.ru/text/animals/2021/05/07/69904460/'>Подробнее</a>",
+    "date": "2021-05-07"
+  },
+  {
     "id": 36,
     "title": "Содержать нельзя истребить... Красная кнопка",
     "content": "<iframe width=560 height=315 src='https://www.youtube.com/embed/c8RrDuwNQs4' frameborder=0 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
