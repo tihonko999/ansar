@@ -32,12 +32,14 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.item
-  margin: 0 0 15px 0
-  padding: 0 0 15px 0
+<style scoped>
+.item {
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
 
-  .time
-    font-style: italic
-    margin-bottom: 3px
+  .time {
+    font-style: italic;
+    margin-bottom: 3px;
+  }
+}
 </style>

@@ -18,7 +18,7 @@ export default {
     ],
   },
   loading: {color: '#004679'},
-  css: ['normalize.css', '~/assets/app.sass'],
+  css: ['normalize.css', '~/assets/app.css'],
   plugins: [],
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
@@ -30,9 +30,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/device',
   ],
-  styleResources: {
-    sass: '~assets/_globals.sass',
-  },
   axios: {
     baseURL: process.env.NODE_ENV === 'production' ? 'https://veterinar-ufa.ru' : 'http://localhost:3000',
   },

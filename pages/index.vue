@@ -44,30 +44,38 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.grid
-  padding: .5em 1em 0 1em
+<style scoped>
+.grid {
+  padding: .5em 1em 0 1em;
+}
 
-.iframe
-  height: 280px
+.iframe {
+  height: 280px;
+}
 
-.rightcol
-  .item
-    margin-bottom: 20px
+.rightcol {
+  .item {
+    margin-bottom: 20px;
 
-    .time
-      font-style: italic
-      margin-bottom: 3px
+    .time {
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+  }
+  .all {
+    text-align: right;
+  }
+}
 
-  .all
-    text-align: right
-//desktop
-@media (min-width: $breakpoint)
-  .iframe
-    height: 480px
-  .grid
-    display: grid
-    grid-template-columns: 1fr 300px
-    grid-gap: 40px
-    padding: .5em 2em 0 2em
+@media (min-width: 900px) {
+  .iframe {
+    height: 480px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-gap: 40px;
+    padding: .5em 2em 0 2em;
+  }
+}
 </style>

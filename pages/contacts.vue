@@ -21,19 +21,23 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.socials
-  display: flex
-  margin: 30px 0
+<style scoped>
+.socials {
+  display: flex;
+  margin: 30px 0;
 
-  .item
-    margin-right: 10px
-    width: 51px
-    height: 51px
+  .item {
+    margin-right: 10px;
+    width: 51px;
+    height: 51px;
 
-    &.__vk
-      background: url(~assets/img/vk-logo.svg)
+    &.__vk {
+      background: url(~assets/img/vk-logo.svg);
+    }
 
-    &.__wa
-      background: url(~assets/img/wa-logo.svg)
+    &.__wa {
+      background: url(~assets/img/wa-logo.svg);
+    }
+  }
+}
 </style>

@@ -42,17 +42,20 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.question
-  cursor: pointer
-  color: #2078bb
-  display: block
-  margin-bottom: 15px
-  padding-bottom: 15px
-  border-bottom: 1px dotted #ccc
-  &:hover
-    color: #bd2026
-.answer
-  margin: 0 0 25px 20px
-  line-height: 1.5
+<style scoped>
+.question {
+  cursor: pointer;
+  color: #2078bb;
+  display: block;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #ccc;
+  &:hover {
+    color: #bd2026;
+  }
+}
+.answer {
+  margin: 0 0 25px 20px;
+  line-height: 1.5;
+}
 </style>
